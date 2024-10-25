@@ -14,19 +14,35 @@ This project tracks two main business processes: monitoring student success and 
 
 The first two research questions focus on tracking student success in exams, while the last two questions focus on analyzing subjects and comparing difficulty levels across study modules.
 
-## Key Components
+## Project Components
 
-### 1. OLTP Data Source
+### 1. OLTP Data Source - University Student Administration Database
 
 - The OLTP database is the primary data source, holding detailed transactional data about students, including enrollment, course performance, exam results, and demographic data, provided by the course professor.
 - For the full-size picture of the OLTP database, as an ER diagram, [click here](https://raw.githubusercontent.com/NovakMastilovic/SSIS_ETL_University_DB/refs/heads/main/University_OLTP_Database.png).
    
-### 2. ETL Process
+### 2. Identifying Key Tables from the OLTP Database
 
-- **ETL Tools**: Implemented in SSMS and SSIS.
-- **Data Extraction**: Extracted data from tables in the OLTP database, including `Student`, `Enrollment`, `Exam`, and `Course`.
-- **Data Transformation**: Applied transformations such as data cleansing, dimension creation, and surrogate key generation. Ensured referential integrity by managing foreign key relationships.
-- **Data Loading**: Loaded the transformed data into the data warehouse in a star schema structure for optimized query performance.
+To build a data warehouse that could effectively address the research questions, a thorough selection process was applied to the OLTP **University Student Administration Database**. This process ensured that only the most relevant tables were included in the star schema to optimize data storage, retrieval, and analysis.
+
+#### Table Selection Process
+
+- **OLTP Database Review**: Initially, the entire OLTP schema was reviewed to understand the data structure and identify tables that could contribute meaningful insights.
+- **BI Model Canvas**: A BI (Business Intelligence) Model Canvas was used to identify which tables were essential for the analysis. This model helped define:
+  - **End Users**: Faculty administration and student advisors.
+  - **Data Attributes**: Demographic details, exam scores, enrollment periods, and course-specific performance metrics.
+  - **Analytical Needs**: Insights into student demographics, course performance, exam retake patterns, and program-specific success rates.
+
+#### Selected Tables
+
+The following tables were chosen based on their relevance to the research questions and their potential contribution to the data warehouse structure:
+- **Student**: Captures demographic details, high school background, and entrance exam scores, allowing for demographic and academic performance analysis.
+- **Course**: Contains information on courses, linking each student to subjects taken and enabling course-level performance analysis.
+- **Enrollment**: Details the enrollment periods and student status, allowing for time-based analyses.
+- **Exam Results**: Tracks individual exam attempts, scores, and pass/fail status, forming the basis for the fact table in the data warehouse.
+
+By focusing on these tables, the data warehouse is optimized to provide answers to the research questions while avoiding unnecessary data complexity and storage.
+
 
 ### 3. Data Warehouse Schema Design
 
