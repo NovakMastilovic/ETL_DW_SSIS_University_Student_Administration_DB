@@ -1,10 +1,18 @@
 # About the project
 
-This project was developed as part of the Data Warehousing course in the Business Analytics master’s program at the Faculty of Organizational Sciences, University of Belgrade. The project focuses on constructing a star schema data warehouse and implementing an ETL (Extract, Transform, Load) pipeline to address key research questions using data from an OLTP (Online Transaction Processing) database. The ETL process was implemented using SQL Server Management Studio (SSMS) and SQL Server Integration Services (SSIS).
+This project was developed as part of the *Data Warehousing* course in the *Business Analytics* master’s program at the Faculty of Organizational Sciences, University of Belgrade. The project focuses on constructing a **star schema** data warehouse and implementing an **ETL** (Extract, Transform, Load) pipeline to address key research questions using data from an **OLTP** (Online Transaction Processing) database — **University Student Administration**.
 
-## Project Overview
+The data used in this project is not real but consists of mixed and anonymized records, serving as a simulation for educational purposes. The ETL process was implemented using **SQL Server Management Studio** (SSMS) and SQL **Server Integration Services** (SSIS).
 
-The primary goal of this project was to design and implement a data warehouse that captures detailed information about student performance, enabling efficient reporting and insights for academic administration. This project covers the full data warehousing process, from data extraction in an OLTP database to the ETL pipeline, schema design, and visualization, with a strong focus on technical implementations.
+## Scope of the project - Research questions
+
+This project tracks two main business processes: monitoring student success and analyzing course exam performance. Each of these processes includes two key research questions, as outlined here:
+- Do demographic characteristics of students affect their academic success?
+- Are high school performance and entrance exam results good predictors of student success in university?
+- Are there specific exams that students tend to postpone until the October exam period?
+- Does a student’s study program affect their grades in specific subjects?
+
+The first two research questions focus on tracking student success in exams, while the last two questions focus on analyzing subjects and comparing difficulty levels across study modules.
 
 ## Key Components
 
