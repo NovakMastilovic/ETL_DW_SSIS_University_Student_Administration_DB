@@ -11,8 +11,8 @@ The primary goal of this project was to design and implement a data warehouse th
 ### 1. OLTP Data Source
 
 - The OLTP database is the primary data source, holding detailed transactional data about students, including enrollment, course performance, exam results, and demographic data.
-- This OLTP data is denormalized and transferred to a structured star schema for optimized reporting and analysis.
-
+- For the full-size picture of the OLTP database, as an ER diagram, [click here](https://raw.githubusercontent.com/NovakMastilovic/SSIS_ETL_University_DB/refs/heads/main/University_OLTP_Database.png).
+   
 ### 2. ETL Process
 
 - **ETL Tools**: Implemented in SSMS and SSIS.
