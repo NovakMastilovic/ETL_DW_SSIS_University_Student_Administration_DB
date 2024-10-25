@@ -1,6 +1,6 @@
 # About the project
 
-This project was developed as part of the *Data Warehousing* course in the *Business Analytics* master’s program at the Faculty of Organizational Sciences, University of Belgrade. The project focuses on constructing a star schema data warehouse and implementing an ETL (Extract, Transform, Load) pipeline to analyze student success data from an OLTP (Online Transaction Processing) database using SQL Server Management Studio (SSMS) and SQL Server Integration Services (SSIS). 
+This project was developed as part of the Data Warehousing course in the Business Analytics master’s program at the Faculty of Organizational Sciences, University of Belgrade. The project focuses on constructing a star schema data warehouse and implementing an ETL (Extract, Transform, Load) pipeline to address key research questions using data from an OLTP (Online Transaction Processing) database. The ETL process was implemented using SQL Server Management Studio (SSMS) and SQL Server Integration Services (SSIS).
 
 ## Project Overview
 
