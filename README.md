@@ -10,7 +10,7 @@ The primary goal of this project was to design and implement a data warehouse th
 
 ### 1. OLTP Data Source
 
-- The OLTP database is the primary data source, holding detailed transactional data about students, including enrollment, course performance, exam results, and demographic data.
+- The OLTP database is the primary data source, holding detailed transactional data about students, including enrollment, course performance, exam results, and demographic data, provided by the course professor.
 - For the full-size picture of the OLTP database, as an ER diagram, [click here](https://raw.githubusercontent.com/NovakMastilovic/SSIS_ETL_University_DB/refs/heads/main/University_OLTP_Database.png).
    
 ### 2. ETL Process
