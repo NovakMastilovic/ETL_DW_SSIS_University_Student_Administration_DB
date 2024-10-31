@@ -6,7 +6,7 @@ The data used in this project is not real but consists of mixed and anonymized r
 
 ## Scope of the project - Research questions
 
-This project tracks two main business processes: monitoring student success and analyzing course exam performance. Each of these processes includes two key research questions, as outlined here:
+This project tracks two main business processes: **monitoring student success** and **analyzing course exam performance**. Each of these processes includes two key research questions, as outlined here:
 - Do demographic characteristics of students affect their academic success?
 - Are high school performance and entrance exam results good predictors of student success in university?
 - Are there specific exams that students tend to postpone until the October exam period?
@@ -20,28 +20,50 @@ The first two research questions focus on tracking student success in exams, whi
 
 - The OLTP database is the primary data source, holding detailed transactional data about students, including enrollment, course performance, exam results, and demographic data, provided by the course professor.
 - For the full-size picture of the OLTP database, as an ER diagram, [click here](https://raw.githubusercontent.com/NovakMastilovic/SSIS_ETL_University_DB/refs/heads/main/University_OLTP_Database.png).
-   
+
 ### 2. Identifying Key Tables from the OLTP Database
 
-To build a data warehouse that could effectively address the research questions, a thorough selection process was applied to the OLTP **University Student Administration Database**. This process ensured that only the most relevant tables were included in the star schema to optimize data storage, retrieval, and analysis.
+In order to define our Data Warehouse (dimension tables and fact table), we analyzed our research questions to determine the relevant tables for inclusion. This selection process was further refined by constructing a business matrix (Table 1) and a BI Model Canvas, which guided the identification of key data dimensions aligned with each research question.
 
-#### Table Selection Process
+| Dimension       | Research question 1 | Research question 2 | Research question 3 | Research question 4 |
+|-----------------|---------------------|---------------------|---------------------|---------------------|
+| **Student**     | ✔                   | ✔                   |                     | ✔                   |
+| **Exam**        |                     |                     | ✔                   | ✔                   |
+| **Subject**     |                     |                     | ✔                   | ✔                   |
+| **Profile**     |                     | ✔                   |                     |                     |
+| **City**        | ✔                   |                     |                     |                     |
+| **Country**     | ✔                   |                     |                     |                     |
+| **Date**        |                     |                     | ✔                   |                     |
 
-- **OLTP Database Review**: Initially, the entire OLTP schema was reviewed to understand the data structure and identify tables that could contribute meaningful insights.
-- **BI Model Canvas**: A BI (Business Intelligence) Model Canvas was used to identify which tables were essential for the analysis. This model helped define:
-  - **End Users**: Faculty administration and student advisors.
-  - **Data Attributes**: Demographic details, exam scores, enrollment periods, and course-specific performance metrics.
-  - **Analytical Needs**: Insights into student demographics, course performance, exam retake patterns, and program-specific success rates.
+*Table 1 - Business matrix*
 
-#### Selected Tables
+#### BI Model Canvas
 
-The following tables were chosen based on their relevance to the research questions and their potential contribution to the data warehouse structure:
-- **Student**: Captures demographic details, high school background, and entrance exam scores, allowing for demographic and academic performance analysis.
-- **Course**: Contains information on courses, linking each student to subjects taken and enabling course-level performance analysis.
-- **Enrollment**: Details the enrollment periods and student status, allowing for time-based analyses.
-- **Exam Results**: Tracks individual exam attempts, scores, and pass/fail status, forming the basis for the fact table in the data warehouse.
+To ensure that the data warehouse captures all necessary insights, we applied a BI Model Canvas approach, addressing key questions such as *Who*, *What*, *Where*, *When*, *How*, and *How Many*. This structured approach enabled us to define dimensions and ensure they meet the analytical needs of the project. The BI Model Canvas is summarized below:
 
-By focusing on these tables, the data warehouse is optimized to provide answers to the research questions while avoiding unnecessary data complexity and storage.
+| Question      | Answered By                                                                |
+|---------------|---------------------------------------------------------------------------|
+| **Who**       | Student                                                                   |
+| **What**      | Course, High School, Enrollment                                           |
+| **Why**       | Not applicable in this model                                              |
+| **Where**     | Place, Municipality, Country                                              |
+| **When**      | Exam Date, Exam Period, Academic Year                                     |
+| **How**       | Study Type, Exam Type, Enrollment Status, Profile, Course Plan, Academic Year |
+| **How Many**  | Exam Results                                                              |
+
+#### Selected Dimensions
+
+Based on the BI Model Canvas, we finalized the following dimensions to build the star schema for our data warehouse:
+
+- **Student**: Captures demographic attributes, high school background, and entrance exam scores, aiding in demographic and academic performance analysis.
+- **Course**: Holds course-specific information, linking students to subjects and enabling performance evaluation at the course level.
+- **Enrollment**: Details enrollment periods and the academic status of each student, supporting time-based analyses of academic success.
+- **Location**: Includes place, municipality, and country for geographic context in demographic analyses.
+- **Date**: Tracks exam dates, facilitating time-series analysis based on academic calendars.
+- **Exam Period**: Contains information on specific exam periods, enabling insights into exam scheduling and performance patterns.
+- **Study Profile**: Contains data on study programs and specializations, allowing for analysis of performance differences across programs.
+
+These dimensions establish a robust framework for our data warehouse, supporting comprehensive analysis and reporting on student success and exam performance trends.
 
 
 ### 3. Data Warehouse Schema Design
