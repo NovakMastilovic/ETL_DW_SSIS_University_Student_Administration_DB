@@ -23,7 +23,7 @@ The first two research questions focus on tracking student success in exams, whi
 ### 1. OLTP Data Source - University Student Administration Database
 
 - The OLTP database is the primary data source, holding detailed transactional data about students, including enrollment, course performance, exam results, and demographic data, provided by the course professor.
-- For the full-size picture of the OLTP database, as an ER diagram, [click here](https://raw.githubusercontent.com/NovakMastilovic/SSIS_ETL_University_DB/refs/heads/main/University_OLTP_Database_Diagram.png).
+- For the full-size picture of the OLTP database, as an ER diagram, [click here](https://raw.githubusercontent.com/NovakMastilovic/SSIS_ETL_University_DB/refs/heads/main/Diagram_OLTP_UniversityDatabase.png).
 
 ### 2. Identifying Key Tables from the OLTP Database
 
