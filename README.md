@@ -78,6 +78,7 @@ The sequence is organized as follows:
 2. Load the fact table (`FactRezultatIspita`).
 
 ![ETL Sequence Container Diagram](Diagram_ETL_SequenceContainer.png)
+
 *Picture 2 - ETL Sequence Container in SSIS*
 
 
