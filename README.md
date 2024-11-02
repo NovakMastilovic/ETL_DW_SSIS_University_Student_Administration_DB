@@ -41,20 +41,9 @@ To define our Data Warehouse structure (including dimension and fact tables), we
 
 *Table 1 - BI model Canvas*
 
-Finally, Based on the BI Model Canvas, we finalized the following dimensions to build the star schema for our data warehouse:
-
-- **Student**: Captures demographic attributes, high school background, and entrance exam scores, aiding in demographic and academic performance analysis.
-- **Course**: Holds course-specific information, linking students to subjects and enabling performance evaluation at the course level.
-- **Enrollment**: Details enrollment periods and the academic status of each student, supporting time-based analyses of academic success.
-- **Location**: Includes place, municipality, and country for geographic context in demographic analyses.
-- **Date**: Tracks exam dates, facilitating time-series analysis based on academic calendars.
-- **Exam Period**: Contains information on specific exam periods, enabling insights into exam scheduling and performance patterns.
-- **Study Profile**: Contains data on study programs and specializations, allowing for analysis of performance differences across programs.
-
-These dimensions establish a robust framework for our data warehouse, supporting comprehensive analysis and reporting on student success and exam performance trends.
-
-
 ### 3. Data Warehouse Schema Design
+
+Based on the analyzed tables through BI Model Canvas, this would be the suggested structure of the Data Warehouse star schema.
 
 - **Star Schema Structure**: Designed a star schema consisting of a central fact table (`Fact_ExamResults`) and associated dimension tables (`Dim_Student`, `Dim_Course`, `Dim_Date`, `Dim_Enrollment`).
   - **Fact Table**: Captures each exam attempt with associated student and course information, including score, date, and pass/fail status.
