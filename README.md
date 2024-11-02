@@ -41,55 +41,28 @@ To define our Data Warehouse structure (including dimension and fact tables), we
 
 *Table 1 - BI model Canvas*
 
-### 3. Data Warehouse Schema Design
-
-Based on the analyzed tables through BI Model Canvas, this would be the suggested structure of the Data Warehouse star schema.
-
-- **Star Schema Structure**: Designed a star schema consisting of a central fact table (`Fact_ExamResults`) and associated dimension tables (`Dim_Student`, `Dim_Course`, `Dim_Date`, `Dim_Enrollment`).
-  - **Fact Table**: Captures each exam attempt with associated student and course information, including score, date, and pass/fail status.
-  - **Dimensions**: Contains details like student demographics, course details, exam dates, and enrollment information, with surrogate keys to simplify joins.
-- **Surrogate Keys**: Used surrogate keys to ensure efficient joins and maintain referential integrity across the schema.
-
-### Star Schema Design
+### 3. Data Warehouse Star Schema Design
 
 Based on the analyzed tables through the BI Model Canvas, the following structure represents the proposed Data Warehouse star schema.
 
 ![Data Warehouse Star Schema](Diagram_DataWarehouse_StarSchema.png)
 
-The star schema consists of a central fact table (`FactRezultatIspita`) surrounded by several dimension tables (`DimStudent`, `DimPredmet`, `DimRok`, `DimUpis`, `DimDate`). This structure was achieved through a denormalization process, simplifying the OLTP database tables into a structure optimized for analytical queries.
+The star schema consists of a central fact table (`FactRezultatIspita`) surrounded by dimension tables (`DimStudent`, `DimPredmet`, `DimRok`, `DimUpis`, `DimDate`). This structure was achieved through a denormalization process, simplifying the OLTP database tables into a structure optimized for analytical queries based on the research questions initially defined.
 
 #### Fact Table
-- **`FactRezultatIspita`**: This table serves as the central fact table and records each exam attempt by students. It includes surrogate keys from each dimension table, as well as measures like the exam score and a pass/fail indicator. By linking to the dimension tables, this table provides a comprehensive view of student performance across exams.
+- **`FactRezultatIspita`**: This table serves as the central fact table and records each exam attempt by students.
 
 #### Dimension Tables
 
-- **`DimStudent`**: Created by joining tables `student`, `sif_tip_studija`, `sif_srednja_skola`, `sif_mesto`, `sif_opstina`, and `sif_drzava`. This dimension stores demographic and academic information about each student, such as:
-  - Name and location of the high school attended
-  - Scores from each year in high school, used to calculate an average
-  - Admission points and study type
+- **`DimStudent`**: Created by joining tables `student`, `sif_tip_studija`, `sif_srednja_skola`, `sif_mesto`, `sif_opstina`, and `sif_drzava`. This dimension stores demographic and academic information about each student.
 
-- **`DimPredmet`**: This dimension was created by combining the tables `profil`, `predmeti_po_planovima`, and `predmet` from the OLTP database. It includes attributes such as:
-  - Subject name
-  - Subject acronym
-  - Profile or study program to which the subject belongs
+- **`DimPredmet`**: This dimension was created by combining the tables `profil`, `predmeti_po_planovima`, and `predmet` from the OLTP database.
 
-- **`DimRok`**: Created by merging tables `sif_tip_roka` and `sif_rok`, this dimension provides details about the exam period:
-  - Name of the exam period, which includes both the month and academic year
-  - A unique identifier for each exam period
+- **`DimRok`**: Created by merging tables `sif_tip_roka` and `sif_rok`, this dimension provides details about the exam period.
 
-- **`DimUpis`**: This dimension contains enrollment details, created from the `upis` table in the OLTP database. It includes information on:
-  - The academic year of enrollment
-  - Study year, profile, and enrollment status
+- **`DimUpis`**: This dimension contains enrollment details, created from the `upis` table in the OLTP database.
 
-- **`DimDate`**: A necessary dimension for tracking exam dates, even though our research questions do not specifically require a time dimension. It stores:
-  - Day, month, and academic year of the exam
-  - A hierarchical structure, where day represents the highest level of granularity
-
-#### Surrogate Keys
-Surrogate keys are employed in each table to ensure efficient joins and maintain referential integrity across the schema. These keys, generated automatically, act as unique identifiers for each row in the tables, enabling quick data retrieval and a streamlined structure for analysis.
-
-This star schema provides a clear and efficient model for tracking and analyzing student exam performance, enabling quick access to data insights through simplified queries.
-
+- **`DimDate`**: A necessary dimension for tracking exam dates, even though our research questions do not specifically require a time dimension.
 
 ### 4. Data Transformation and Automation
 
