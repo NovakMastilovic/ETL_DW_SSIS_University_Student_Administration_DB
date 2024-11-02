@@ -7,8 +7,12 @@ The data used in this project is not real but consists of mixed and anonymized r
 ## Scope of the project - Research questions
 
 This project tracks two main business processes: **monitoring student success** and **analyzing course exam performance**. Each of these processes includes two key research questions, as outlined here:
+
+**Monitoring student success**:
 - Do demographic characteristics of students affect their academic success?
 - Are high school performance and entrance exam results good predictors of student success in university?
+
+**Analyzing course exam performanse**:
 - Are there specific exams that students tend to postpone until the October exam period?
 - Does a student’s study program affect their grades in specific subjects?
 
@@ -23,25 +27,9 @@ The first two research questions focus on tracking student success in exams, whi
 
 ### 2. Identifying Key Tables from the OLTP Database
 
-In order to define our Data Warehouse (dimension tables and fact table), we analyzed our research questions to determine the relevant tables for inclusion. This selection process was further refined by constructing a business matrix (Table 1) and a BI Model Canvas, which guided the identification of key data dimensions aligned with each research question.
+To define our Data Warehouse structure (including dimension and fact tables), we analyzed our research questions to identify the relevant tables for inclusion. A BI Model Canvas was used to ensure that the data warehouse would capture all necessary insights by addressing key questions such as: *Who*, *What*, *Where*, *When*, *How*, and *How Many*. Summary of BI model canvas is shown in the Table 1 below:
 
-| Dimension       | Research question 1 | Research question 2 | Research question 3 | Research question 4 |
-|-----------------|---------------------|---------------------|---------------------|---------------------|
-| **Student**     | ✔                   | ✔                   |                     | ✔                   |
-| **Exam**        |                     |                     | ✔                   | ✔                   |
-| **Subject**     |                     |                     | ✔                   | ✔                   |
-| **Profile**     |                     | ✔                   |                     |                     |
-| **City**        | ✔                   |                     |                     |                     |
-| **Country**     | ✔                   |                     |                     |                     |
-| **Date**        |                     |                     | ✔                   |                     |
-
-*Table 1 - Business matrix*
-
-#### BI Model Canvas
-
-To ensure that the data warehouse captures all necessary insights, we applied a BI Model Canvas approach, addressing key questions such as *Who*, *What*, *Where*, *When*, *How*, and *How Many*. This structured approach enabled us to define dimensions and ensure they meet the analytical needs of the project. The BI Model Canvas is summarized below:
-
-| Question      | Answered By                                                                |
+| Question      | Answered by Table                                                         |
 |---------------|---------------------------------------------------------------------------|
 | **Who**       | Student                                                                   |
 | **What**      | Course, High School, Enrollment                                           |
@@ -51,9 +39,9 @@ To ensure that the data warehouse captures all necessary insights, we applied a 
 | **How**       | Study Type, Exam Type, Enrollment Status, Profile, Course Plan, Academic Year |
 | **How Many**  | Exam Results                                                              |
 
-#### Selected Dimensions
+*Table 1 - BI model Canvas*
 
-Based on the BI Model Canvas, we finalized the following dimensions to build the star schema for our data warehouse:
+Finally, Based on the BI Model Canvas, we finalized the following dimensions to build the star schema for our data warehouse:
 
 - **Student**: Captures demographic attributes, high school background, and entrance exam scores, aiding in demographic and academic performance analysis.
 - **Course**: Holds course-specific information, linking students to subjects and enabling performance evaluation at the course level.
