@@ -65,22 +65,6 @@ The star schema consists of a central fact table (`FactRezultatIspita`) surround
 
 - **`DimDate`**: A necessary dimension for tracking exam dates, even though our research questions do not specifically require a time dimension.
 
-### 4. ETL process
-
-The ETL process was designed to extract data from the original **Studenti** database and load it into the **Studenti_Projekat** Data Warehouse. This process was implemented using SQL Server Management Studio and Visual Studio (SSIS packages). The ETL flow was divided into several packages to handle the loading of dimension and fact tables respectively.
-
-#### 4.1 Package: Execute
-
-The **Execute** package serves as the main orchestrator, controlling the sequence in which all other packages are executed. In this package, we used a sequential container to define the exact order for running each package. The established order ensures that all dimension tables are loaded before the fact table, preserving referential integrity across the data warehouse, as the fact table stores foreign keys for each dimension.
-
-The sequence is organized as follows:
-1. Load all dimension tables (`DimDate`, `DimStudent`, `DimRok`, `DimPredmet`, `DimUpis`).
-2. Load the fact table (`FactRezultatIspita`).
-
-![ETL Sequence Container Diagram](Diagram_ETL_SequenceContainer.png)
-
-*Picture 2 - ETL Sequence Container in SSIS*
-
 ### 4. ETL Process
 
 The ETL process was developed using SQL Server Management Studio and Visual Studio (SSIS packages) to load data from the **Studenti** database into the **Studenti_Projekat** Data Warehouse - mentioned above. The process is organized into a series of packages, structured to handle both dimension and fact tables.
