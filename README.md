@@ -81,57 +81,39 @@ The sequence is organized as follows:
 
 *Picture 2 - ETL Sequence Container in SSIS*
 
+### 4. ETL Process
 
-#### 4.2 Package: DimStudent
+The ETL process was developed using SQL Server Management Studio and Visual Studio (SSIS packages) to load data from the **Studenti** database into the **Studenti_Projekat** Data Warehouse - mentioned above. The process is organized into a series of packages, structured to handle both dimension and fact tables.
 
-The **DimStudent** package focuses on populating the student dimension table. This package includes two main tasks: **Execute SQL Task** and **Data Flow Task**.
+#### 4.1 Package: Execute
 
-- **Execute SQL Task**: This task recreates the `DimStudent` table before each load to avoid duplicate data. It checks if there’s an existing connection between the fact table and the `DimStudent` table and removes it temporarily to maintain referential integrity during loading.
+The **Execute** package serves as the main orchestrator, managing the sequence in which all packages are executed. A sequential container defines the order, ensuring all dimension tables are loaded before the fact table to preserve referential integrity.
 
-- **Data Flow Task**: This task performs data transformations, such as lookups and unions, to compile data from various tables (`student`, `sif_tip_studija`, `sif_srednja_skola`, `sif_mesto`, `sif_opstina`, and `sif_drzava`). The data flow includes:
-  - **Lookup** operations to retrieve data not directly in the `student` table (e.g., high school details).
-  - **Union All** to merge results and **Derived Column** transformations to handle missing values.
+The execution sequence is as follows:
+1. Load all dimension tables (`DimDate`, `DimStudent`, `DimRok`, `DimPredmet`, `DimUpis`).
+2. Load the fact table (`FactRezultatIspita`).
 
-The end result is a comprehensive dimension table that contains all relevant student data, ensuring consistency and completeness for analytical queries.
+![ETL Sequence Container Diagram](Diagram_ETL_SequenceContainer.png)
 
-#### 4.3 Package: DimRok
+#### 4.2 Dimension Packages
 
-The **DimRok** package loads the exam period dimension, capturing details about each exam session.
+Each dimension table is populated through its own dedicated package, consisting of two primary tasks: **Execute SQL Task** and **Data Flow Task**. The **Execute SQL Task** recreates the dimension table before each load to avoid data duplication. The **Data Flow Task** then extracts, transforms, and loads data from relevant source tables, with lookups and transformations.
 
-- **Execute SQL Task**: Similar to the `DimStudent` package, this task recreates the `DimRok` table each time to prevent data duplication and maintains referential integrity by removing constraints temporarily.
-- **Data Flow Task**: This task extracts data from tables `sif_tip_roka` and `sif_rok`, performing lookups and transformations to ensure that each row represents a unique exam period. The final data is then loaded into the `DimRok` table.
+The dimension packages include:
+- **DimStudent**: Aggregates student demographics and high school details from various tables, forming a complete student profile.
+- **DimRok**: Loads details for each exam period, ensuring each session is uniquely represented.
+- **DimPredmet**: Compiles information on courses, linking subjects to student study programs.
+- **DimDate**: Stores exam dates (day, month, year) to support time-based analyses.
+- **DimUpis**: Tracks enrollment details, such as academic year, study profile, and enrollment status, by combining data from tables like `profi`, `godina_studija`, and `status_upisa`.
 
-#### 4.4 Package: DimPredmet
+#### 4.3 Fact Package: FactRezultatIspita
 
-The **DimPredmet** package handles the course dimension, which stores information about the courses students are enrolled in.
+The **FactRezultatIspita** package populates the central fact table, which records each student's exam results. This package also includes two tasks:
 
-- **Execute SQL Task**: As in previous packages, this task ensures the table is recreated to avoid duplicates.
-- **Data Flow Task**: In this step, we use lookups to retrieve course details from various tables (`predmet`, `profil`, and `planovi`). Union and transformation steps handle missing values, preparing the data for accurate loading into `DimPredmet`.
+- **Execute SQL Task**: Creates the `FactRezultatIspita` table and re-establishes foreign key relationships with dimension tables, ensuring referential integrity.
+- **Data Flow Task**: Maps exam data to relevant surrogate keys from each dimension table, capturing essential details such as student ID, course, enrollment, and exam period.
 
-#### 4.5 Package: DimDate
-
-The **DimDate** package manages the date dimension, which tracks when exams were taken.
-
-- **Execute SQL Task**: This task recreates the `DimDate` table each time the ETL process runs.
-- **Data Flow Task**: Although the research questions did not specifically require a date dimension, it was added for completeness. This dimension contains day, month, and year columns, providing flexibility for time-based analyses.
-
-#### 4.6 Package: DimUpis
-
-The **DimUpis** package loads the enrollment dimension, tracking students' enrollment details.
-
-- **Execute SQL Task**: As with other dimension packages, this task recreates the `DimUpis` table before each load.
-- **Data Flow Task**: This task extracts and transforms data related to enrollment details, such as academic year, study profile, and enrollment status, from tables like `profi`, `godina_studija`, and `status_upisa`. The final result is stored in `DimUpis`.
-
-#### 4.7 Package: FactRezultatIspita
-
-The **FactRezultatIspita** package loads the central fact table, capturing each student’s exam results.
-
-- **Execute SQL Task**: This task creates the `FactRezultatIspita` table and re-establishes relationships with the dimension tables by using foreign keys. This process ensures referential integrity and enables accurate, efficient analysis.
-- **Data Flow Task**: The task retrieves exam result data and maps it to the appropriate surrogate keys from each dimension table. This fact table records each exam attempt with relevant details such as student ID, course, enrollment, and exam period.
-
-Each ETL package follows a systematic process to ensure data quality, integrity, and consistency, providing a solid foundation for analytical reporting in the Data Warehouse.
-
-
+Each package is designed to ensure data quality, integrity, and consistency, creating a reliable foundation for analytical reporting in the Data Warehouse.
 
 ---
 
