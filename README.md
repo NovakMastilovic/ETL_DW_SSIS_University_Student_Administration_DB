@@ -23,7 +23,7 @@ The first two research questions focus on tracking student success in exams, whi
 ### 1. OLTP Data Source - University Student Administration Database
 
 - The OLTP database is the primary data source, holding detailed transactional data about students, including enrollment, course performance, exam results, and demographic data, provided by the course professor.
-- For the full-size picture of the OLTP database, as an ER diagram, [click here](https://raw.githubusercontent.com/NovakMastilovic/SSIS_ETL_University_DB/refs/heads/main/Diagram/Diagram_OLTP_UniversityDatabase.png).
+- For the full-size picture of the OLTP database, as an ER diagram, [click here](https://raw.githubusercontent.com/NovakMastilovic/SSIS_ETL_University_DB/refs/heads/main/Diagrams/Diagram_OLTP_UniversityDatabase.png).
 
 ### 2. Identifying Key Tables from the OLTP Database
 
@@ -45,7 +45,7 @@ To define our Data Warehouse structure (including dimension and fact tables), we
 
 Based on the analyzed tables through the BI Model Canvas, the following structure represents the proposed Data Warehouse star schema in *Diagram 1*.
 
-![Data Warehouse Star Schema](Diagram/Diagram_DataWarehouse_StarSchema.png)
+![Data Warehouse Star Schema](Diagrams/Diagram_DataWarehouse_StarSchema.png)
 *Diagram 1 - Data Warehouse Star Schema*
 
 The star schema consists of a central fact table (`FactRezultatIspita`) surrounded by dimension tables (`DimStudent`, `DimPredmet`, `DimRok`, `DimUpis`, `DimDate`). This structure was achieved through a denormalization process, simplifying the OLTP database tables into a structure optimized for analytical queries based on the research questions initially defined.
@@ -77,7 +77,7 @@ The execution sequence is as follows:
 1. Load all dimension tables (`DimDate`, `DimStudent`, `DimRok`, `DimPredmet`, `DimUpis`).
 2. Load the fact table (`FactRezultatIspita`).
 
-![ETL Sequence Container Diagram](Diagram_ETL_SequenceContainer.png)
+![ETL Sequence Container Diagram](Diagrams/Diagram_ETL_SequenceContainer.png)
 *Diagram 2 - Sequence Container in SSIS*
 
 #### 4.2 Package: Dimension and Fact Tables
@@ -101,7 +101,7 @@ This chapter presents the results of our analysis, structured to answer each of 
 
 To address this question, we created a dashboard displaying students' average grades segmented by demographic factors, including country, city, and municipality of origin.
 
-![Demographics Dashboard](Demographics_Dashboard.png)
+![Demographics Dashboard](Visualisation/Demographics_Dashboard.png)
  
 - **Conclusion**: Our analysis revealed that most students come from Serbia, followed by smaller groups from Montenegro and Bosnia. However, data inconsistencies, such as misclassified regions and incorrect municipalities, make it challenging to derive a reliable conclusion about demographic impact.
 
@@ -109,7 +109,7 @@ To address this question, we created a dashboard displaying students' average gr
 
 For this question, we analyzed the relationship between students' high school averages and their university grades.
 
-![Academic Performance Correlation](Academic_Performance_Correlation.png)
+![Academic Performance Correlation](Visualisation/Academic_Performance_Correlation.png)
 
 - **Visualization**: This scatter plot shows a trend line representing the relationship between high school performance (x-axis) and university GPA (y-axis). Each point represents an individual student, allowing us to observe clusters and outliers.
 
@@ -119,7 +119,7 @@ For this question, we analyzed the relationship between students' high school av
 
 This analysis examines if certain exams are more frequently delayed to later exam periods, suggesting higher difficulty levels.
 
-![Exam Scheduling Patterns](Exam_Scheduling_Patterns.png)
+![Exam Scheduling Patterns](Visualisation/Exam_Scheduling_Patterns.png)
 
 - **Visualization**: This dashboard includes bar charts showing the number of students attempting each exam in each period. Filters allow users to analyze the data by school year, study program, and course.
 
@@ -129,7 +129,7 @@ This analysis examines if certain exams are more frequently delayed to later exa
 
 To explore if there’s a relationship between study programs and student performance, we compared average grades across programs for various subjects.
 
-![Program Comparison](Program_Comparison.png)
+![Program Comparison](Visualisation/Program_Comparison.png)
 
 - **Visualization**: This heat map shows subjects on the y-axis and average grades by study program on the x-axis. Colors range from dark green (high average grades) to dark red (low average grades), providing a visual representation of performance differences.
 
