@@ -1,0 +1,2867 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/23/2023 10:02:56 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-30BUOGF"
+  DTS:CreatorName="DESKTOP-30BUOGF\Korisnik"
+  DTS:DTSID="{EC5381F3-B90D-407C-8E44-B5E70F50C0BB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{37822AEE-C2BE-4105-B3BB-31E63FCE946C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7A0587B8-FB2B-493F-90E4-2434F69D4710}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Korisnik\Desktop\rez.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id_student"
+              DTS:DTSID="{C614C485-A046-46AF-B6E3-E5B41B9B0974}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id_tip_studija"
+              DTS:DTSID="{D66333D7-894D-4C55-8F8E-3A2FC83CE544}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id_srednja_skola"
+              DTS:DTSID="{A3ADEA17-A092-47F9-B612-FEE2BE31A8CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prosecna_ocena_1"
+              DTS:DTSID="{20EC124A-A70B-4D51-9263-F6A1D6F67699}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prosecna_ocena_2"
+              DTS:DTSID="{22FBD477-CE5E-48E1-881E-43022DAC74CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prosecna_ocena_3"
+              DTS:DTSID="{8966DF21-EAF1-40E0-85E5-0E09F03F1264}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prosecna_ocena_4"
+              DTS:DTSID="{B97E089F-0109-4EBA-83AC-032718682A5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="uspeh_bodovi"
+              DTS:DTSID="{E3AF312C-7AD8-4010-AE1D-0CE728CD6AEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prijemni_bodovi"
+              DTS:DTSID="{E3F1B1EB-E7BE-47B3-B3D7-29B67436E8D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="srednja_skola_naziv"
+              DTS:DTSID="{CE7AE67D-230E-443B-A13F-31D2917F411B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="srednja_skola_mesto"
+              DTS:DTSID="{C9C0FF5D-EE07-45A8-A532-6A1DDB30398E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="srednja_skola_opstina"
+              DTS:DTSID="{35ABE2A7-15D7-41E6-98E6-6BEE9C0B42E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="srednja_skola_drzava"
+              DTS:DTSID="{718FD8CB-8911-4222-BCBB-E224045CADA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tip_studija_naziv"
+              DTS:DTSID="{B6A47E60-6D6F-4F92-8573-9AC6499A1727}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{F2AE55EA-8209-425F-AFEF-ADA574348225}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{82480599-0C5F-45D1-8E70-BAABBD829D5F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DROP and CREATE DimStudent"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{05E5EAC8-8E81-40E4-8714-BF1AEC7677F3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DROP and CREATE DimStudent"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3568B0E4-1F64-489B-923E-1E6439854A50}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="IF EXISTS &#xA;&#x9;(SELECT *&#xA;&#x9;FROM INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS&#xA;&#x9;WHERE CONSTRAINT_NAME = 'FK_FactRezultatIspita_DimStudent')&#xA;&#xA;BEGIN&#xA;&#x9;ALTER TABLE [dbo].[FactRezultatIspita] DROP CONSTRAINT [FK_FactRezultatIspita_DimStudent]&#xA;END&#xA;&#xA;IF EXISTS&#xA;&#x9;(SELECT *&#xA;&#x9;FROM sysobjects&#xA;&#x9;WHERE id = OBJECT_ID(N'DimStudent'))&#xA;&#xA;BEGIN&#xA;&#x9;-- brisanje tabele STUDENT&#xA;&#x9;DROP TABLE [dbo].[DimStudent]&#xA;&#xA;&#x9;-- pravljenje tabele STUDENT&#xA;&#x9;CREATE TABLE [dbo].[DimStudent](&#xA;&#x9;[id_student_surogat] [int] IDENTITY(1,1) NOT NULL,&#xA;&#x9;[id_student] [int] NOT NULL,&#xA;&#x9;[tip_studija_naziv] [nvarchar](50) NULL,&#xA;&#x9;[srednja_skola_naziv] [nvarchar](200) NULL,&#xA;&#x9;[srednja_skola_mesto] [nvarchar](100) NULL,&#xA;&#x9;[srednja_skola_opstina] [nvarchar](100) NULL,&#xA;&#x9;[srednja_skola_drzava] [nvarchar](100) NULL,&#xA;&#x9;[prosecna_ocena_1] [real] NULL,&#xA;&#x9;[prosecna_ocena_2] [real] NULL,&#xA;&#x9;[prosecna_ocena_3] [real] NULL,&#xA;&#x9;[prosecna_ocena_4] [real] NULL,&#xA;&#x9;[uspeh_bodovi] [real] NULL,&#xA;&#x9;[prijemni_bodovi] [real] NULL,&#xA; CONSTRAINT [PK_DimStudent] PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[id_student_surogat] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\ETL DimStudent"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{837E3DAF-123F-478B-85D2-8DA4911FAF72}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ETL DimStudent"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ETL DimStudent\drzava"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="drzava"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[sif_drzava]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[sif_drzava]) [refTable]
+where [refTable].[id_drzava] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_drzava" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="naziv" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_drzava]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL DimStudent\drzava.Connections[OleDbConnection]"
+                  connectionManagerID="{E5A67B5A-F24F-4BBC-80C7-386516CC14B5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-30BUOGF_SQLEXPRESS.Studenti]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL DimStudent\drzava.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\drzava.Inputs[Lookup Input].Columns[id_drzava]"
+                      cachedDataType="i4"
+                      cachedName="id_drzava"
+                      lineageId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_drzava]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">id_drzava</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL DimStudent\drzava.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\ETL DimStudent\drzava.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\drzava.Outputs[Lookup Match Output].Columns[srednja_skola_drzava]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\ETL DimStudent\drzava.Outputs[Lookup Match Output].Columns[srednja_skola_drzava]"
+                      name="srednja_skola_drzava"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">naziv</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\drzava.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\ETL DimStudent\drzava.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\drzava.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\ETL DimStudent\drzava.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\drzava.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\drzava.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\drzava.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\drzava.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL DimStudent\mesto"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="mesto"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[sif_mesto]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[sif_mesto]) [refTable]
+where [refTable].[id_mesto] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_mesto" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="naziv" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_mesto]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL DimStudent\mesto.Connections[OleDbConnection]"
+                  connectionManagerID="{E5A67B5A-F24F-4BBC-80C7-386516CC14B5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-30BUOGF_SQLEXPRESS.Studenti]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL DimStudent\mesto.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\mesto.Inputs[Lookup Input].Columns[id_mesto]"
+                      cachedDataType="i2"
+                      cachedName="id_mesto"
+                      lineageId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_mesto]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">id_mesto</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL DimStudent\mesto.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\ETL DimStudent\mesto.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\mesto.Outputs[Lookup Match Output].Columns[srednja_skola_mesto]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\ETL DimStudent\mesto.Outputs[Lookup Match Output].Columns[srednja_skola_mesto]"
+                      name="srednja_skola_mesto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">naziv</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\mesto.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\ETL DimStudent\mesto.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\mesto.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\ETL DimStudent\mesto.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\mesto.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\mesto.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\mesto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\mesto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL DimStudent\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimStudent]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL DimStudent\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{3568B0E4-1F64-489B-923E-1E6439854A50}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-30BUOGF_SQLEXPRESS.Studenti_Projekat]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id_student]"
+                      cachedDataType="i2"
+                      cachedName="id_student"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_student]"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_student]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[prosecna_ocena_1]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_1"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prosecna_ocena_1]"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_1]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[prosecna_ocena_2]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_2"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prosecna_ocena_2]"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_2]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[prosecna_ocena_3]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_3"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prosecna_ocena_3]"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_3]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[prosecna_ocena_4]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_4"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prosecna_ocena_4]"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_4]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[uspeh_bodovi]"
+                      cachedDataType="r4"
+                      cachedName="uspeh_bodovi"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[uspeh_bodovi]"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[uspeh_bodovi]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[prijemni_bodovi]"
+                      cachedDataType="r4"
+                      cachedName="prijemni_bodovi"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prijemni_bodovi]"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prijemni_bodovi]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[tip_studija_naziv]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="tip_studija_naziv"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tip_studija_naziv]"
+                      lineageId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Match Output].Columns[tip_studija_naziv]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[srednja_skola_naziv_new]"
+                      cachedDataType="wstr"
+                      cachedLength="402"
+                      cachedName="srednja_skola_naziv_new"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[srednja_skola_naziv]"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_naziv_new]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[srednja_skola_mesto_new]"
+                      cachedDataType="wstr"
+                      cachedLength="202"
+                      cachedName="srednja_skola_mesto_new"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[srednja_skola_mesto]"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_mesto_new]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[srednja_skola_opstina_new]"
+                      cachedDataType="wstr"
+                      cachedLength="202"
+                      cachedName="srednja_skola_opstina_new"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[srednja_skola_opstina]"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_opstina_new]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[srednja_skola_drzava_new]"
+                      cachedDataType="wstr"
+                      cachedLength="202"
+                      cachedName="srednja_skola_drzava_new"
+                      externalMetadataColumnId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[srednja_skola_drzava]"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_drzava_new]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_student_surogat]"
+                      dataType="i4"
+                      name="id_student_surogat" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id_student]"
+                      dataType="i4"
+                      name="id_student" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tip_studija_naziv]"
+                      dataType="wstr"
+                      length="50"
+                      name="tip_studija_naziv" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[srednja_skola_naziv]"
+                      dataType="wstr"
+                      length="200"
+                      name="srednja_skola_naziv" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[srednja_skola_mesto]"
+                      dataType="wstr"
+                      length="100"
+                      name="srednja_skola_mesto" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[srednja_skola_opstina]"
+                      dataType="wstr"
+                      length="100"
+                      name="srednja_skola_opstina" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[srednja_skola_drzava]"
+                      dataType="wstr"
+                      length="100"
+                      name="srednja_skola_drzava" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prosecna_ocena_1]"
+                      dataType="r4"
+                      name="prosecna_ocena_1" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prosecna_ocena_2]"
+                      dataType="r4"
+                      name="prosecna_ocena_2" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prosecna_ocena_3]"
+                      dataType="r4"
+                      name="prosecna_ocena_3" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prosecna_ocena_4]"
+                      dataType="r4"
+                      name="prosecna_ocena_4" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[uspeh_bodovi]"
+                      dataType="r4"
+                      name="uspeh_bodovi" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prijemni_bodovi]"
+                      dataType="r4"
+                      name="prijemni_bodovi" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL DimStudent\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL DimStudent\opstina"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="opstina"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[sif_opstina]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[sif_opstina]) [refTable]
+where [refTable].[id_opstina] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_opstina" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="naziv" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_opstina]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL DimStudent\opstina.Connections[OleDbConnection]"
+                  connectionManagerID="{E5A67B5A-F24F-4BBC-80C7-386516CC14B5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-30BUOGF_SQLEXPRESS.Studenti]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL DimStudent\opstina.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\opstina.Inputs[Lookup Input].Columns[id_opstina]"
+                      cachedDataType="i2"
+                      cachedName="id_opstina"
+                      lineageId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_opstina]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">id_opstina</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL DimStudent\opstina.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\ETL DimStudent\opstina.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\opstina.Outputs[Lookup Match Output].Columns[srednja_skola_opstina]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\ETL DimStudent\opstina.Outputs[Lookup Match Output].Columns[srednja_skola_opstina]"
+                      name="srednja_skola_opstina"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">naziv</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\opstina.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\ETL DimStudent\opstina.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\opstina.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\ETL DimStudent\opstina.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\opstina.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\opstina.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\opstina.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\opstina.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL DimStudent\Read table STUDENT"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Read table STUDENT"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[student]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL DimStudent\Read table STUDENT.Connections[OleDbConnection]"
+                  connectionManagerID="{E5A67B5A-F24F-4BBC-80C7-386516CC14B5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-30BUOGF_SQLEXPRESS.Studenti]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_student]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_student]"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_student]"
+                      name="id_student"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_tip_studija]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_tip_studija]"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_tip_studija]"
+                      name="id_tip_studija"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_srednja_skola]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_srednja_skola]"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_srednja_skola]"
+                      name="id_srednja_skola"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_1]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[prosecna_ocena_1]"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_1]"
+                      name="prosecna_ocena_1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_2]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[prosecna_ocena_2]"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_2]"
+                      name="prosecna_ocena_2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_3]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[prosecna_ocena_3]"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_3]"
+                      name="prosecna_ocena_3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_4]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[prosecna_ocena_4]"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_4]"
+                      name="prosecna_ocena_4"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[uspeh_bodovi]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[uspeh_bodovi]"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[uspeh_bodovi]"
+                      name="uspeh_bodovi"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prijemni_bodovi]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[prijemni_bodovi]"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prijemni_bodovi]"
+                      name="prijemni_bodovi"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_student]"
+                      dataType="i4"
+                      name="id_student" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[student_ime]"
+                      dataType="wstr"
+                      length="50"
+                      name="student_ime" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[student_prezime]"
+                      dataType="wstr"
+                      length="50"
+                      name="student_prezime" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_tip_studija]"
+                      dataType="i2"
+                      name="id_tip_studija" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[pol]"
+                      dataType="i2"
+                      name="pol" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[godina_rodjenja]"
+                      dataType="i2"
+                      name="godina_rodjenja" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_srednja_skola]"
+                      dataType="i2"
+                      name="id_srednja_skola" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[godina_zavrsetka]"
+                      dataType="i2"
+                      name="godina_zavrsetka" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_mesto_rodjenja]"
+                      dataType="i2"
+                      name="id_mesto_rodjenja" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_opstina_rodjenja]"
+                      dataType="i2"
+                      name="id_opstina_rodjenja" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_drzava_rodjenja]"
+                      dataType="i4"
+                      name="id_drzava_rodjenja" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_mesto_tokom_studija]"
+                      dataType="i2"
+                      name="id_mesto_tokom_studija" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_opstina_tokom_studija]"
+                      dataType="i2"
+                      name="id_opstina_tokom_studija" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_drzava_tokom_studija]"
+                      dataType="i4"
+                      name="id_drzava_tokom_studija" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_mesto_stanovanja]"
+                      dataType="i2"
+                      name="id_mesto_stanovanja" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_opstina_stanovanja]"
+                      dataType="i2"
+                      name="id_opstina_stanovanja" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[id_drzava_stanovanja]"
+                      dataType="i4"
+                      name="id_drzava_stanovanja" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[prosecna_ocena_1]"
+                      dataType="r4"
+                      name="prosecna_ocena_1" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[prosecna_ocena_2]"
+                      dataType="r4"
+                      name="prosecna_ocena_2" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[prosecna_ocena_3]"
+                      dataType="r4"
+                      name="prosecna_ocena_3" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[prosecna_ocena_4]"
+                      dataType="r4"
+                      name="prosecna_ocena_4" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[uspeh_bodovi]"
+                      dataType="r4"
+                      name="uspeh_bodovi" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[prijemni_bodovi]"
+                      dataType="r4"
+                      name="prijemni_bodovi" />
+                    <externalMetadataColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].ExternalColumns[datum_diplomiranja]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="datum_diplomiranja" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[id_student]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[id_student]"
+                      name="id_student" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[id_tip_studija]"
+                      dataType="i2"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[id_tip_studija]"
+                      name="id_tip_studija" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[id_srednja_skola]"
+                      dataType="i2"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[id_srednja_skola]"
+                      name="id_srednja_skola" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[prosecna_ocena_1]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[prosecna_ocena_1]"
+                      name="prosecna_ocena_1" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[prosecna_ocena_2]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[prosecna_ocena_2]"
+                      name="prosecna_ocena_2" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[prosecna_ocena_3]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[prosecna_ocena_3]"
+                      name="prosecna_ocena_3" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[prosecna_ocena_4]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[prosecna_ocena_4]"
+                      name="prosecna_ocena_4" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[uspeh_bodovi]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[uspeh_bodovi]"
+                      name="uspeh_bodovi" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[prijemni_bodovi]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Error Output].Columns[prijemni_bodovi]"
+                      name="prijemni_bodovi" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL DimStudent\REPLACE NULL"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="REPLACE NULL"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\ETL DimStudent\REPLACE NULL.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Inputs[Derived Column Input].Columns[srednja_skola_naziv]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="srednja_skola_naziv"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_naziv]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Inputs[Derived Column Input].Columns[srednja_skola_mesto]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="srednja_skola_mesto"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_mesto]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Inputs[Derived Column Input].Columns[srednja_skola_opstina]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="srednja_skola_opstina"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_opstina]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Inputs[Derived Column Input].Columns[srednja_skola_drzava]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="srednja_skola_drzava"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_drzava]" />
+                    <inputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Inputs[Derived Column Input].Columns[tip_studija_naziv]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="tip_studija_naziv"
+                      lineageId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Match Output].Columns[tip_studija_naziv]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\ETL DimStudent\REPLACE NULL.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_naziv_new]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="402"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_naziv_new]"
+                      name="srednja_skola_naziv_new"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_naziv]},"nema srednja skola")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(srednja_skola_naziv,"nema srednja skola")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_mesto_new]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="202"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_mesto_new]"
+                      name="srednja_skola_mesto_new"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_mesto]},"nema srednja skola mesto")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(srednja_skola_mesto,"nema srednja skola mesto")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_opstina_new]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="202"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_opstina_new]"
+                      name="srednja_skola_opstina_new"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_opstina]},"nema srednja skola opstina")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(srednja_skola_opstina,"nema srednja skola opstina")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_drzava_new]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="202"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[srednja_skola_drzava_new]"
+                      name="srednja_skola_drzava_new"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_drzava]},"nema srednja skola drzava")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(srednja_skola_drzava,"nema srednja skola drzava")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[tip_studija_new]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="102"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output].Columns[tip_studija_new]"
+                      name="tip_studija_new"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\ETL DimStudent\tip_studija.Outputs[Lookup Match Output].Columns[tip_studija_naziv]},"nema tip studija")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(tip_studija_naziv,"nema tip studija")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\ETL DimStudent\REPLACE NULL.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL DimStudent\srednja_skola"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="srednja_skola"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[sif_srednja_skola]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[sif_srednja_skola]) [refTable]
+where [refTable].[id_srednja_skola] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_srednja_skola" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="naziv" dataType="DT_WSTR" length="200" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_mesto" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_opstina" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="id_drzava" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_srednja_skola]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL DimStudent\srednja_skola.Connections[OleDbConnection]"
+                  connectionManagerID="{E5A67B5A-F24F-4BBC-80C7-386516CC14B5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-30BUOGF_SQLEXPRESS.Studenti]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL DimStudent\srednja_skola.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\srednja_skola.Inputs[Lookup Input].Columns[id_srednja_skola]"
+                      cachedDataType="i2"
+                      cachedName="id_srednja_skola"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_srednja_skola]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">id_srednja_skola</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\ETL DimStudent\srednja_skola.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[srednja_skola_naziv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="200"
+                      lineageId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[srednja_skola_naziv]"
+                      name="srednja_skola_naziv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">naziv</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_mesto]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_mesto]"
+                      name="id_mesto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_mesto</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_opstina]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_opstina]"
+                      name="id_opstina"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_opstina</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_drzava]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[id_drzava]"
+                      name="id_drzava"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">id_drzava</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\ETL DimStudent\srednja_skola.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\ETL DimStudent\srednja_skola.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL DimStudent\tip_studija"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="tip_studija"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[sif_tip_studija]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[sif_tip_studija]) [refTable]
+where [refTable].[id_tip_studija] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id_tip_studija" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="naziv" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_tip_studija]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL DimStudent\tip_studija.Connections[OleDbConnection]"
+                  connectionManagerID="{E5A67B5A-F24F-4BBC-80C7-386516CC14B5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-30BUOGF_SQLEXPRESS.Studenti]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL DimStudent\tip_studija.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\tip_studija.Inputs[Lookup Input].Columns[id_tip_studija]"
+                      cachedDataType="i2"
+                      cachedName="id_tip_studija"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_tip_studija]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">id_tip_studija</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\ETL DimStudent\tip_studija.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Match Output].Columns[tip_studija_naziv]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Match Output].Columns[tip_studija_naziv]"
+                      name="tip_studija_naziv"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">naziv</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\tip_studija.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\ETL DimStudent\tip_studija.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\ETL DimStudent\tip_studija.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL DimStudent\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1].Columns[id_student]"
+                      cachedDataType="i2"
+                      cachedName="id_student"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_student]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_student]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1].Columns[id_tip_studija]"
+                      cachedDataType="i2"
+                      cachedName="id_tip_studija"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_tip_studija]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_tip_studija]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1].Columns[id_srednja_skola]"
+                      cachedDataType="i2"
+                      cachedName="id_srednja_skola"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_srednja_skola]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_srednja_skola]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1].Columns[prosecna_ocena_1]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_1"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_1]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_1]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1].Columns[prosecna_ocena_2]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_2"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_2]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_2]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1].Columns[prosecna_ocena_3]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_3"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_3]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_3]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1].Columns[prosecna_ocena_4]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_4]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_4]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1].Columns[uspeh_bodovi]"
+                      cachedDataType="r4"
+                      cachedName="uspeh_bodovi"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[uspeh_bodovi]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[uspeh_bodovi]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1].Columns[prijemni_bodovi]"
+                      cachedDataType="r4"
+                      cachedName="prijemni_bodovi"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prijemni_bodovi]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prijemni_bodovi]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2].Columns[id_student]"
+                      cachedDataType="i2"
+                      cachedName="id_student"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_student]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_student]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2].Columns[id_tip_studija]"
+                      cachedDataType="i2"
+                      cachedName="id_tip_studija"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_tip_studija]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_tip_studija]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2].Columns[id_srednja_skola]"
+                      cachedDataType="i2"
+                      cachedName="id_srednja_skola"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_srednja_skola]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_srednja_skola]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2].Columns[prosecna_ocena_1]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_1"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_1]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_1]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2].Columns[prosecna_ocena_2]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_2"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_2]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_2]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2].Columns[prosecna_ocena_3]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_3"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_3]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_3]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2].Columns[prosecna_ocena_4]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_4]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_4]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2].Columns[uspeh_bodovi]"
+                      cachedDataType="r4"
+                      cachedName="uspeh_bodovi"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[uspeh_bodovi]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[uspeh_bodovi]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2].Columns[prijemni_bodovi]"
+                      cachedDataType="r4"
+                      cachedName="prijemni_bodovi"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prijemni_bodovi]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prijemni_bodovi]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5]"
+                  hasSideEffects="true"
+                  name="Union All Input 5">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[id_student]"
+                      cachedDataType="i2"
+                      cachedName="id_student"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_student]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_student]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[id_tip_studija]"
+                      cachedDataType="i2"
+                      cachedName="id_tip_studija"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_tip_studija]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_tip_studija]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[id_srednja_skola]"
+                      cachedDataType="i2"
+                      cachedName="id_srednja_skola"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[id_srednja_skola]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_srednja_skola]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[prosecna_ocena_1]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_1"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_1]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_1]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[prosecna_ocena_2]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_2"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_2]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_2]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[prosecna_ocena_3]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_3"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_3]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_3]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[prosecna_ocena_4]"
+                      cachedDataType="r4"
+                      cachedName="prosecna_ocena_4"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prosecna_ocena_4]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_4]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[uspeh_bodovi]"
+                      cachedDataType="r4"
+                      cachedName="uspeh_bodovi"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[uspeh_bodovi]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[uspeh_bodovi]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[prijemni_bodovi]"
+                      cachedDataType="r4"
+                      cachedName="prijemni_bodovi"
+                      lineageId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output].Columns[prijemni_bodovi]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prijemni_bodovi]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[srednja_skola_naziv]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="srednja_skola_naziv"
+                      lineageId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output].Columns[srednja_skola_naziv]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_naziv]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[srednja_skola_mesto]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="srednja_skola_mesto"
+                      lineageId="Package\ETL DimStudent\mesto.Outputs[Lookup Match Output].Columns[srednja_skola_mesto]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_mesto]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[srednja_skola_opstina]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="srednja_skola_opstina"
+                      lineageId="Package\ETL DimStudent\opstina.Outputs[Lookup Match Output].Columns[srednja_skola_opstina]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_opstina]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5].Columns[srednja_skola_drzava]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="srednja_skola_drzava"
+                      lineageId="Package\ETL DimStudent\drzava.Outputs[Lookup Match Output].Columns[srednja_skola_drzava]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_drzava]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_student]"
+                      dataType="i2"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_student]"
+                      name="id_student" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_tip_studija]"
+                      dataType="i2"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_tip_studija]"
+                      name="id_tip_studija" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_srednja_skola]"
+                      dataType="i2"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[id_srednja_skola]"
+                      name="id_srednja_skola" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_1]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_1]"
+                      name="prosecna_ocena_1" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_2]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_2]"
+                      name="prosecna_ocena_2" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_3]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_3]"
+                      name="prosecna_ocena_3" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_4]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prosecna_ocena_4]"
+                      name="prosecna_ocena_4" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[uspeh_bodovi]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[uspeh_bodovi]"
+                      name="uspeh_bodovi" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prijemni_bodovi]"
+                      dataType="r4"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[prijemni_bodovi]"
+                      name="prijemni_bodovi" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_naziv]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_naziv]"
+                      name="srednja_skola_naziv" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_mesto]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_mesto]"
+                      name="srednja_skola_mesto" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_opstina]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_opstina]"
+                      name="srednja_skola_opstina" />
+                    <outputColumn
+                      refId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_drzava]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1].Columns[srednja_skola_drzava]"
+                      name="srednja_skola_drzava" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ETL DimStudent.Paths[Derived Column Output]"
+              endId="Package\ETL DimStudent\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\ETL DimStudent\REPLACE NULL.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\ETL DimStudent.Paths[Lookup Match Output]"
+              endId="Package\ETL DimStudent\mesto.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\ETL DimStudent.Paths[Lookup Match Output1]"
+              endId="Package\ETL DimStudent\drzava.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\ETL DimStudent\opstina.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\ETL DimStudent.Paths[Lookup Match Output2]"
+              endId="Package\ETL DimStudent\opstina.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\ETL DimStudent\mesto.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\ETL DimStudent.Paths[Lookup Match Output3]"
+              endId="Package\ETL DimStudent\Union All.Inputs[Union All Input 5]"
+              name="Lookup Match Output"
+              startId="Package\ETL DimStudent\drzava.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\ETL DimStudent.Paths[Lookup Match Output4]"
+              endId="Package\ETL DimStudent\REPLACE NULL.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\ETL DimStudent\tip_studija.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\ETL DimStudent.Paths[Lookup No Match Output]"
+              endId="Package\ETL DimStudent\Union All.Inputs[Union All Input 1]"
+              name="Lookup No Match Output"
+              startId="Package\ETL DimStudent\srednja_skola.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\ETL DimStudent.Paths[Lookup No Match Output1]"
+              endId="Package\ETL DimStudent\Union All.Inputs[Union All Input 2]"
+              name="Lookup No Match Output"
+              startId="Package\ETL DimStudent\mesto.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\ETL DimStudent.Paths[OLE DB Source Output]"
+              endId="Package\ETL DimStudent\srednja_skola.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\ETL DimStudent\Read table STUDENT.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\ETL DimStudent.Paths[Union All Output 1]"
+              endId="Package\ETL DimStudent\tip_studija.Inputs[Lookup Input]"
+              name="Union All Output 1"
+              startId="Package\ETL DimStudent\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{AE13D7D7-C876-4F8F-BA87-E508F1633170}"
+      DTS:From="Package\DROP and CREATE DimStudent"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\ETL DimStudent" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="230.4,41.6"
+          Id="Package\DROP and CREATE DimStudent"
+          TopLeft="194.166658951177,65.8666671901279" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\ETL DimStudent"
+          TopLeft="226.666657659743,173.333334710863" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="306.61665830546,107.466667190128">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65.8666675207351"
+              Start="0,0"
+              End="0,58.3666675207351">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.3666675207351" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Paket za popunjavanje tabele DimStudent"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="248.8,40"
+          Id="6bd5a285-ce8e-41a4-8095-f0c86716dc85"
+          TopLeft="511.666646334861,172.466668037309" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ETL DimStudent">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\ETL DimStudent\srednja_skola"
+          TopLeft="267.744097104914,219.984513532792" />
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\ETL DimStudent\tip_studija"
+          TopLeft="626.228931344854,484.519195769805" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\ETL DimStudent\mesto"
+          TopLeft="518.602672995275,220.212122962211" />
+        <NodeLayout
+          Size="112,41.6"
+          Id="Package\ETL DimStudent\opstina"
+          TopLeft="785.65653443738,217.743436073904" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\ETL DimStudent\REPLACE NULL"
+          TopLeft="894.949459387402,487.346805219886" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\ETL DimStudent\Union All"
+          TopLeft="633.164958005269,413.023572305986" />
+        <NodeLayout
+          Size="109.6,41.6"
+          Id="Package\ETL DimStudent\drzava"
+          TopLeft="989.419152603208,221.262628021064" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\ETL DimStudent\OLE DB Destination"
+          TopLeft="885.521850334406,560.882159339646" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\ETL DimStudent\Read table STUDENT"
+          TopLeft="254.789552165135,135.996634077438" />
+        <EdgeLayout
+          Id="Package\ETL DimStudent.Paths[Derived Column Output]"
+          TopLeft="972.035654860904,528.946805219886">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.9353541197598"
+              Start="0,0"
+              End="0,24.4353541197598">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.4353541197598" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL DimStudent.Paths[Union All Output 1]"
+          TopLeft="691.096944675062,454.623572305986">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.8956234638189"
+              Start="0,0"
+              End="0,22.3956234638189">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.3956234638189" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL DimStudent.Paths[OLE DB Source Output]"
+          TopLeft="342.066824635024,177.596634077438">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.3878794553545"
+              Start="0,0"
+              End="0,34.8878794553545">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.8878794553545" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL DimStudent.Paths[Lookup No Match Output1]"
+          TopLeft="571.802672995275,261.812122962211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="121.362285009994,151.211449343775"
+              Start="0,0"
+              End="121.362285009994,143.711449343775">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.6057246718875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,71.6057246718875"
+                    Point2="0,75.6057246718875"
+                    Point3="4,75.6057246718875" />
+                  <mssgle:LineSegment
+                    End="117.362285009994,75.6057246718875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="117.362285009994,75.6057246718875"
+                    Point2="121.362285009994,75.6057246718875"
+                    Point3="121.362285009994,79.6057246718875" />
+                  <mssgle:LineSegment
+                    End="121.362285009994,143.711449343775" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="4.87475578624701,80.6057246718875,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL DimStudent.Paths[Lookup No Match Output]"
+          TopLeft="338.944097104914,261.584513532792">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="326.220860900355,151.439058773194"
+              Start="0,0"
+              End="326.220860900355,143.939058773194">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,94.764603547735" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,94.764603547735"
+                    Point2="0,98.764603547735"
+                    Point3="4,98.764603547735" />
+                  <mssgle:LineSegment
+                    End="322.220860900355,98.764603547735" />
+                  <mssgle:CubicBezierSegment
+                    Point1="322.220860900355,98.764603547735"
+                    Point2="326.220860900355,98.764603547735"
+                    Point3="326.220860900355,102.764603547735" />
+                  <mssgle:LineSegment
+                    End="326.220860900355,143.939058773194" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="107.304043731428,103.764603547735,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL DimStudent.Paths[Lookup Match Output4]"
+          TopLeft="751.828931344854,506.733000494846">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="143.120528042548,0"
+              Start="0,0"
+              End="135.620528042548,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="135.620528042548,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="19.6188773025238,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL DimStudent.Paths[Lookup Match Output3]"
+          TopLeft="1044.21915260321,262.862628021064">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-323.054194597939,150.160944284922"
+              Start="0,0"
+              End="-323.054194597939,142.660944284922">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,93.9310506206011" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,93.9310506206011"
+                    Point2="0,97.9310506206011"
+                    Point3="-4,97.9310506206011" />
+                  <mssgle:LineSegment
+                    End="-319.054194597939,97.9310506206011" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-319.054194597939,97.9310506206011"
+                    Point2="-323.054194597939,97.9310506206011"
+                    Point3="-323.054194597939,101.931050620601" />
+                  <mssgle:LineSegment
+                    End="-323.054194597939,142.660944284922" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-209.718484017719,102.931050620601,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL DimStudent.Paths[Lookup Match Output2]"
+          TopLeft="625.002672995275,239.777779518058">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="160.653861442105,0"
+              Start="0,0"
+              End="153.153861442105,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="153.153861442105,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="28.3855440023027,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL DimStudent.Paths[Lookup Match Output1]"
+          TopLeft="897.65653443738,240.303032047484">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="91.7626181658277,0"
+              Start="0,0"
+              End="84.2626181658277,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="84.2626181658277,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-6.06007763583616,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL DimStudent.Paths[Lookup Match Output]"
+          TopLeft="410.144097104914,240.898318247501">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.458575890361,0"
+              Start="0,0"
+              End="100.958575890361,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="100.958575890361,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="2.28790122643071,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL DimStudent\srednja_skola">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[sif_srednja_skola]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL DimStudent\mesto">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[sif_mesto]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL DimStudent\opstina">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[sif_opstina]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL DimStudent\drzava">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[sif_drzava]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL DimStudent\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL DimStudent\Read table STUDENT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
