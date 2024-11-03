@@ -93,6 +93,48 @@ The dimension packages are as follows:
 
 The fact table, `FactRezultatIspita`, is also populated through its own package with the same two primary tasks. The **Execute SQL Task** creates the fact table and re-establishes foreign key relationships with dimension tables to maintain referential integrity. The **Data Flow Task** maps exam data to relevant surrogate keys from each dimension table, capturing key details such as student ID, course, enrollment, and exam period.
 
+### 5. Analysis, Visualisation and Conclusions
+
+This chapter presents the results of our analysis, structured to answer each of the initial research questions. Data visualization was performed in **Tableau**, allowing us to create dashboards that display relevant trends, correlations, and anomalies. Each sub-section addresses a specific research question, showing visualizations used and the conclusions drawn based on the data.
+
+#### 5.1 Research Question 1: Do demographic characteristics of students affect their academic success?
+
+To address this question, we created a dashboard displaying students' average grades segmented by demographic factors, including country, city, and municipality of origin.
+
+![Demographics Dashboard](Demographics_Dashboard.png)
+ 
+- **Conclusion**: Our analysis revealed that most students come from Serbia, followed by smaller groups from Montenegro and Bosnia. However, data inconsistencies, such as misclassified regions and incorrect municipalities, make it challenging to derive a reliable conclusion about demographic impact.
+
+#### 5.2 Research Question 2: Are high school performance and entrance exam results good predictors of university success?
+
+For this question, we analyzed the relationship between students' high school averages and their university grades.
+
+![Academic Performance Correlation](Academic_Performance_Correlation.png)
+
+- **Visualization**: This scatter plot shows a trend line representing the relationship between high school performance (x-axis) and university GPA (y-axis). Each point represents an individual student, allowing us to observe clusters and outliers.
+
+- **Conclusion**: A positive correlation exists between high school performance and university success, with most students maintaining similar performance levels across both stages. Exceptions include some students who improved significantly and others whose performance declined, indicating that while high school performance is a moderate predictor of university success, it is not absolute.
+
+#### 5.3 Research Question 3: Are there specific exams that students tend to postpone until the October exam period?
+
+This analysis examines if certain exams are more frequently delayed to later exam periods, suggesting higher difficulty levels.
+
+![Exam Scheduling Patterns](Exam_Scheduling_Patterns.png)
+
+- **Visualization**: This dashboard includes bar charts showing the number of students attempting each exam in each period. Filters allow users to analyze the data by school year, study program, and course.
+
+- **Conclusion**: The data indicates that exams like **Mathematics 1** and **Mathematics 2** are frequently postponed, with a larger number of students attempting them later in the year. This suggests that these courses might be particularly challenging for students.
+
+#### 5.4 Research Question 4: Does a student’s study program affect their grades in specific subjects?
+
+To explore if there’s a relationship between study programs and student performance, we compared average grades across programs for various subjects.
+
+![Program Comparison](Program_Comparison.png)
+
+- **Visualization**: This heat map shows subjects on the y-axis and average grades by study program on the x-axis. Colors range from dark green (high average grades) to dark red (low average grades), providing a visual representation of performance differences.
+
+- **Conclusion**: Although some subjects, such as **Introduction to Information Systems**, display clear performance differences between study programs, data inconsistency in student distribution across programs affects result accuracy (biased sample from the population in the sample data). Relevant conclusions can only be drawn for well-balanced subject-program combinations.
+
 ---
 
 **Project developed as part of the Data Warehousing course, Faculty of Organizational Sciences, University of Belgrade.**
