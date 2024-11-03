@@ -79,25 +79,18 @@ The execution sequence is as follows:
 
 ![ETL Sequence Container Diagram](Diagram_ETL_SequenceContainer.png)
 
-#### 4.2 Dimension Packages
+#### 4.2 Package: Dimension and Fact Tables
 
-Each dimension table is populated through its own dedicated package, consisting of two primary tasks: **Execute SQL Task** and **Data Flow Task**. The **Execute SQL Task** recreates the dimension table before each load to avoid data duplication. The **Data Flow Task** then extracts, transforms, and loads data from relevant source tables, with lookups and transformations.
+Each dimension table is populated through its own dedicated package, which includes two primary tasks: **Execute SQL Task** and **Data Flow Task**. The **Execute SQL Task** recreates the dimension table before each load to prevent data duplication. The **Data Flow Task** extracts, transforms, and loads data from relevant source tables.
 
-The dimension packages include:
-- **DimStudent**: Aggregates student demographics and high school details from various tables, forming a complete student profile.
-- **DimRok**: Loads details for each exam period, ensuring each session is uniquely represented.
-- **DimPredmet**: Compiles information on courses, linking subjects to student study programs.
-- **DimDate**: Stores exam dates (day, month, year) to support time-based analyses.
-- **DimUpis**: Tracks enrollment details, such as academic year, study profile, and enrollment status, by combining data from tables like `profi`, `godina_studija`, and `status_upisa`.
+The dimension packages are as follows:
+- **DimStudent**: Aggregates student demographics and high school details from various tables.
+- **DimRok**: Loads information for each exam period, ensuring each session is uniquely represented.
+- **DimPredmet**: Compiles course details, linking subjects to study programs.
+- **DimDate**: Stores exam dates (day, month, year) for time-based analyses.
+- **DimUpis**: Tracks enrollment details, including academic year, study profile, and enrollment status.
 
-#### 4.3 Fact Package: FactRezultatIspita
-
-The **FactRezultatIspita** package populates the central fact table, which records each student's exam results. This package also includes two tasks:
-
-- **Execute SQL Task**: Creates the `FactRezultatIspita` table and re-establishes foreign key relationships with dimension tables, ensuring referential integrity.
-- **Data Flow Task**: Maps exam data to relevant surrogate keys from each dimension table, capturing essential details such as student ID, course, enrollment, and exam period.
-
-Each package is designed to ensure data quality, integrity, and consistency, creating a reliable foundation for analytical reporting in the Data Warehouse.
+The fact table, `FactRezultatIspita`, is also populated through its own package with the same two primary tasks. The **Execute SQL Task** creates the fact table and re-establishes foreign key relationships with dimension tables to maintain referential integrity. The **Data Flow Task** maps exam data to relevant surrogate keys from each dimension table, capturing key details such as student ID, course, enrollment, and exam period.
 
 ---
 
