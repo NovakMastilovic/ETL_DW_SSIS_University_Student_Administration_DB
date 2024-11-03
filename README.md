@@ -23,7 +23,7 @@ The first two research questions focus on tracking student success in exams, whi
 ### 1. OLTP Data Source - University Student Administration Database
 
 - The OLTP database is the primary data source, holding detailed transactional data about students, including enrollment, course performance, exam results, and demographic data, provided by the course professor.
-- For the full-size picture of the OLTP database, as an ER diagram, [click here](https://raw.githubusercontent.com/NovakMastilovic/SSIS_ETL_University_DB/refs/heads/main/Diagram_OLTP_UniversityDatabase.png).
+- For the full-size picture of the OLTP database, as an ER diagram, [click here](https://raw.githubusercontent.com/NovakMastilovic/SSIS_ETL_University_DB/refs/heads/main/Diagram/Diagram_OLTP_UniversityDatabase.png).
 
 ### 2. Identifying Key Tables from the OLTP Database
 
@@ -45,7 +45,7 @@ To define our Data Warehouse structure (including dimension and fact tables), we
 
 Based on the analyzed tables through the BI Model Canvas, the following structure represents the proposed Data Warehouse star schema in *Diagram 1*.
 
-![Data Warehouse Star Schema](Diagram_DataWarehouse_StarSchema.png)
+![Data Warehouse Star Schema](Diagram/Diagram_DataWarehouse_StarSchema.png)
 *Diagram 1 - Data Warehouse Star Schema*
 
 The star schema consists of a central fact table (`FactRezultatIspita`) surrounded by dimension tables (`DimStudent`, `DimPredmet`, `DimRok`, `DimUpis`, `DimDate`). This structure was achieved through a denormalization process, simplifying the OLTP database tables into a structure optimized for analytical queries based on the research questions initially defined.
