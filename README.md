@@ -43,10 +43,10 @@ To define our Data Warehouse structure (including dimension and fact tables), we
 
 ### 3. Data Warehouse Star Schema Design
 
-Based on the analyzed tables through the BI Model Canvas, the following structure represents the proposed Data Warehouse star schema in *Picture 1*.
+Based on the analyzed tables through the BI Model Canvas, the following structure represents the proposed Data Warehouse star schema in *Diagram 1*.
 
 ![Data Warehouse Star Schema](Diagram_DataWarehouse_StarSchema.png)
-*Picture 1 - Data Warehouse Star Schema*
+*Diagram 1 - Data Warehouse Star Schema*
 
 The star schema consists of a central fact table (`FactRezultatIspita`) surrounded by dimension tables (`DimStudent`, `DimPredmet`, `DimRok`, `DimUpis`, `DimDate`). This structure was achieved through a denormalization process, simplifying the OLTP database tables into a structure optimized for analytical queries based on the research questions initially defined.
 
@@ -71,13 +71,14 @@ The ETL process was developed using SQL Server Management Studio and Visual Stud
 
 #### 4.1 Package: Execute
 
-The **Execute** package serves as the main orchestrator, managing the sequence in which all packages are executed. A sequential container defines the order, ensuring all dimension tables are loaded before the fact table to preserve referential integrity.
+The **Execute** package serves as the main orchestrator, managing the sequence in which all packages are executed shown in *Diagram 2*. A sequential container defines the order, ensuring all dimension tables are loaded before the fact table to preserve referential integrity.
 
 The execution sequence is as follows:
 1. Load all dimension tables (`DimDate`, `DimStudent`, `DimRok`, `DimPredmet`, `DimUpis`).
 2. Load the fact table (`FactRezultatIspita`).
 
 ![ETL Sequence Container Diagram](Diagram_ETL_SequenceContainer.png)
+*Diagram 2 - Sequence Container in SSIS*
 
 #### 4.2 Package: Dimension and Fact Tables
 
